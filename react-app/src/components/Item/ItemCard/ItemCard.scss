@@ -1,0 +1,29 @@
+@import '../../../theme.scss';
+
+.item-container {
+    display: inline-flex;
+    flex-direction: column;
+    border-width: 1px;
+    border-color: $grey-light;
+    border-style: solid;
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+}
+
+.item-sub-container {
+    // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: $grey-dark;
+}
+
+.item-producer {
+    color: $primary;
+}
