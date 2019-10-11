@@ -28,7 +28,7 @@ const subscribeToItems = () => {
 export { subscribeToItems }
 
 const unsubscribeFromItems = () => {
-  return async (dispatch) => {
+  return async () => {
     items$.unsubscribe()
   }
 }
