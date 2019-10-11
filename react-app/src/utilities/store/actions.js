@@ -1,11 +1,13 @@
-
-import { itemsSearch } from '../store/queries'
-import { apolloClient } from '../api/graphql'
+import { axiosInstance } from '../api/axios'
 
 let setItems2 = () => {
   return async (dispatch) => {
-    let result = await apolloClient.query({ query: itemsSearch })
-    let items = result.data.allPersons
+
+    // endpoint: /people/1/
+    // param: ?format=json
+    let result = await axiosInstance.get('/people/?format=json')
+    console.log(result)
+    let items = result.data.results
     dispatch({type: 'SET_ITEMS', items: items})
   }
 }
